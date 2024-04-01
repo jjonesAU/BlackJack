@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Black Jack HW4
+    </title>
+    <link href="css/blackjackmain.css" rel="stylesheet">
+    <script src="js/black.js" type="application/javascript"></script>
+    <div id="winContainer" >
+        <div id="winner" class="text-center" style="display: none; position: absolute">
+            winner
+        </div>
+    </div>
+</head>
+<body >
+<div id="grid-container">
+    <header>
+        <h2> BlackJack Plus </h2>
+        <img id="suits" src="imgs/suits.png" alt="All 4 Suits">
+    </header>
+    <div class="Left">
+
+        <div id="betArea">
+            <h3> Place Your Bet</h3>
+        <br />
+        Bet <input type="text" name="bet" id="userBet" />
+        <button type="button" id="betButton" onClick="beginGame();">Bet</button>
+        <div id="errorMessage"> </div>
+            <br/>
+        </div>
+
+        <div class="table1">
+           <span id="putBetHere"> Enter bet to start</span>
+            <table>
+                <tr>
+                    <th>Player</th>
+                    <th>Hand Points</th>
+                    <th>Num of Hits</th>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td id="userPts"></td>
+                    <td id="userHits"></td>
+                </tr>
+                <tr>
+                    <td>Dealer</td>
+                    <td id="dealerPts"></td>
+                    <td id="dealerHits"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table2">
+            <span id="overallStatus">Overall Status</span>
+            <table>
+                <tr>
+                    <th>Balance</th>
+                    <td id="balance"></td>
+                </tr>
+                <tr>
+                    <th>Bet</th>
+                    <td id="bet"></td>
+                </tr>
+                <tr>
+                    <th>Games</th>
+                    <td id="games"></td>
+                </tr>
+                <tr>
+                    <th>Wins</th>
+                    <td id="wins"></td>
+                </tr>
+                <tr>
+                    <th>Losses</th>
+                    <td id="losses"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="Right">
+        <div class="userArea">
+            <h3>User's Cards </h3>
+            <b id="userCards">
+            </b>
+            <b>
+                <img id="looserUser" src="imgs/looser.png" alt="Looser!" style="display: none">
+                <img id="youWinUser" src="imgs/winner.png" alt="You Win!" style="display: none">
+            </b>
+            <b>
+                <img id="blackjackUser" src="imgs/blackJack.png" alt="BlackJack!" style="display: none">
+                <img id="bustedUser" src="imgs/busted.png" alt="Busted!" style="display: none" >
+            </b>
+            <div><button type="button" id="hitButton" style="display: none" onClick="hit()">Hit</button>
+                <button type="button" id="stickButton" style="display: none" onClick="stick()">Stick</button>
+            </div>
+        </div>
+
+        <div class="dealerArea">
+            <h3>Dealer's Cards</h3>
+            <b id="dealerCards">
+
+            </b>
+            <b>
+                <img id="looserDealer" src="imgs/looser.png" alt="Looser!" style="display: none">
+                <img id="youWinDealer" src="imgs/winner.png" alt="Dealer Wins!" style="display: none">
+            </b>
+            <img id="blackjackDealer" src="imgs/blackJack.png" alt="BlackJack!" style="display: none">
+            <img id="bustedDealer" src="imgs/busted.png" alt="Busted!" style="display: none">
+            <b>
+
+            </b>
+            <div><button type="button" id="dealerButton" style="display: none" onClick="dealerTurn()">Dealer's turn</button></div>
+        </div>
+
+
+    </div>
+    <footer>
+        <h3>Game by Joshua Jones</h3>
+    </footer>
+</div>
+</body>
+</html>
